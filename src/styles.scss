@@ -1,0 +1,139 @@
+.header {
+    margin-left: 140px;
+    font-size: 50px;
+    top: 0%;
+    width: 100%;
+    text-align: left;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.leftsidebar {
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 2px 0px 0px;
+    height: 100%;
+    width: 140px;
+    top: 0%;
+    left: 0;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.leftsidebar a {
+    display: block;
+    padding: 10%;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.leftsidebar a:hover {
+    color: black;
+    font-size: 23px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+section {
+    margin-left: 140px;
+    font-size: 100%;
+    padding: 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.note,
+.notes {
+    // margin-left: 140px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 10px 10px 10px #1e1d1d;
+    width: 200px;
+    height: 200px;
+    margin: 40px 0px 0px 40px;
+    overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.notes {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100%;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    display: block;
+}
+
+.note img {
+    max-width: 50px;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.notes img {
+    max-width: 200px;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.date {
+
+    top: -233px;
+    left: -25px;
+    font-size: 10px;
+    position: relative;
+}
+
+.pushpin {
+    position: relative;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#deleteHome {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/55ece940e4b048d1ed401c11/1450136257542-4DATU4KRB70MDENGJXJX/X%3A++The+Unknown");
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    left: 110px;
+    top: -200px;
+}
+
+.notescontainer {
+    padding-top: 10%;
+}
+
+#deleteShow {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/55ece940e4b048d1ed401c11/1450136257542-4DATU4KRB70MDENGJXJX/X%3A++The+Unknown");
+    background-size: cover;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.showForm {
+    position: relative;
+    top: 60px;
+}
