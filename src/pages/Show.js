@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 
-export default (props) => {
+export const Show = (props) => {
     const { id } = useParams()
     const navigate = useNavigate()
     const notes = props.notes
@@ -32,7 +32,7 @@ export default (props) => {
             <div className="notes">
                 {note && (
                     <>
-                        <img className="pushpin" src='https://www.freeiconspng.com/thumbs/pushpin-png/pushpin-png-27.png' />
+                        <img className="pushpin" src='https://www.freeiconspng.com/thumbs/pushpin-png/pushpin-png-27.png' alt="pushpin" />
                         <h1>{note.name}</h1>
                         {note.image && (
                             <img src={note.image} alt={note.name} />

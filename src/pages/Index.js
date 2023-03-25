@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-export default (props) => {
+export const Index = (props) => {
     const navigate = useNavigate()
     const [newForm, setNewForm] = useState({
         name: '',
@@ -38,7 +38,7 @@ export default (props) => {
                     <Link to={`/notes/${note._id}`}>
                         {note && (
                             <div key={note._id} className='note'>
-                                <img className="pushpin" src='https://www.freeiconspng.com/thumbs/pushpin-png/pushpin-png-27.png' />
+                                <img className="pushpin" src='https://www.freeiconspng.com/thumbs/pushpin-png/pushpin-png-27.png' alt="pushpin" />
                                 <h1>{note.name}</h1>
                                 {note.image && (
                                     <img src={note.image} alt={note.name} />

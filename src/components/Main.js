@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
-import Index from "../pages/Index"
-import Show from "../pages/Show"
+import { Index } from "../pages/Index"
+import { Show } from "../pages/Show"
 
 const URL = "https://notes-u3.herokuapp.com/notes/"
-export default (props) => {
+export const Main = (props) => {
     const [notes, setNote] = useState([])
 
     const getNote = async () => {
