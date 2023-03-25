@@ -9,7 +9,7 @@ export const Header = (props) => {
             </nav>
             <div className="leftsidebar">
                 <Link to="/">
-                    <div>Home</div>
+                    <strong><div>Home</div></strong>
                 </Link>
             </div>
         </div>
