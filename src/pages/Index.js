@@ -32,14 +32,14 @@ export const Index = (props) => {
             const date = new Date(dateString);
             return date.toLocaleDateString()
         }
-        return props.notes.map((note) => {
+        return props.notes.map((note, index) => {
             return (
-                <div className="notescontainer">
+                <div className='notescontainer$'>
                     <Link to={`/notes/${note._id}`}>
                         {note && (
                             <div key={note._id} className='note'>
-                                <img className="pushpin" src='https://www.freeiconspng.com/thumbs/pushpin-png/pushpin-png-27.png' alt="pushpin" />
-                                <h1>{note.name}</h1>
+
+                                <h1 className="indexH1">{note.name}</h1>
                                 {note.image && (
                                     <img src={note.image} alt={note.name} />
                                 )}
@@ -59,8 +59,8 @@ export const Index = (props) => {
     }
 
     return (
-        <section>
-            <form onSubmit={handleSubmit}>
+        <>
+            <form className="indexForm" onSubmit={handleSubmit}>
                 <input
                     type='text'
                     value={newForm.name}
@@ -75,7 +75,8 @@ export const Index = (props) => {
                     placeholder="image"
                     onChange={handleChange}
                 />
-                <input
+                <textarea
+                    cols="30"
                     type='text'
                     value={newForm.description}
                     name='description'
@@ -84,7 +85,9 @@ export const Index = (props) => {
                 />
                 <input type='submit' value='New Note' />
             </form>
-            {props.notes.length > 0 ? <Loaded /> : <Loading />}
-        </section>
+            <section>
+                {props.notes.length > 0 ? <Loaded /> : <Loading />}
+            </section>
+        </>
     )
 }

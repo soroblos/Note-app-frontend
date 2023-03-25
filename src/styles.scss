@@ -5,10 +5,22 @@
     width: 100%;
     text-align: left;
     padding-left: 5%;
-    padding-bottom: 5%;
+    // padding-bottom: 5%;
+    position: fixed;
+    background-color: white;
+    overflow: hidden;
+    z-index: 1;
+    border-color: #1e1d1d;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+}
+
+.headerText {
+    font-size: 40px;
 }
 
 .leftsidebar {
+    overflow: hidden;
     border-style: solid;
     border-color: black;
     border-width: 0px 2px 0px 0px;
@@ -18,11 +30,13 @@
     left: 0;
     position: fixed;
     padding-top: 20px;
+    z-index: 2;
 }
 
 .leftsidebar a {
     display: block;
-    padding: 10%;
+    margin-top: 50px;
+    padding: 20px;
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -35,11 +49,13 @@
 }
 
 section {
+    margin-top: 10%;
     margin-left: 140px;
     font-size: 100%;
     padding: 0 3%;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 a {
@@ -66,12 +82,26 @@ body {
     // align-items: center;
 }
 
+.note,
+.notes {
+    background-color: rgb(232, 232, 3);
+}
+
+.indexH1 {
+    padding-top: 8%;
+    font-size: 20px;
+}
+
+.showH1 {
+    padding-top: 10%;
+}
+
 .notes {
     margin-left: auto;
     margin-right: auto;
     font-size: 100%;
-    width: 70%;
-    height: 70%;
+    width: 500px;
+    height: 500px;
     position: absolute;
     display: block;
 }
@@ -83,34 +113,27 @@ body {
 }
 
 .notes img {
-    max-width: 200px;
+    max-width: 250px;
     max-height: 100%;
     object-fit: contain;
 }
 
 .date {
-
     top: -233px;
     left: -25px;
     font-size: 10px;
     position: relative;
 }
 
-.pushpin {
-    position: relative;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-}
 
 #deleteHome {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/55ece940e4b048d1ed401c11/1450136257542-4DATU4KRB70MDENGJXJX/X%3A++The+Unknown");
+    background-image: url("https://i.imgur.com/csUjwEy.png");
     background-size: cover;
     border: none;
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: rgb(232, 232, 3);
     position: relative;
     left: 110px;
     top: -200px;
@@ -121,7 +144,7 @@ body {
 }
 
 #deleteShow {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/55ece940e4b048d1ed401c11/1450136257542-4DATU4KRB70MDENGJXJX/X%3A++The+Unknown");
+    background-image: url("https://i.imgur.com/csUjwEy.png");
     background-size: cover;
     border: none;
     width: 20px;
@@ -133,7 +156,26 @@ body {
     right: 0;
 }
 
-.showForm {
-    position: relative;
-    top: 60px;
+.indexForm {
+    top: 200px;
+    position: fixed;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 134px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.indexForm input {
+    width: 132.5px;
 }

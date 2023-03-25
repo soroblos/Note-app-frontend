@@ -5,7 +5,7 @@ export const Header = (props) => {
     return (
         <div className="container">
             <nav className="header">
-                <strong>My Notes</strong>
+                <h1 className="headerText">My Notes</h1>
             </nav>
             <div className="leftsidebar">
                 <Link to="/">

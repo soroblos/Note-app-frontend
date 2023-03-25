@@ -27,46 +27,50 @@ export const Show = (props) => {
         navigate('/')
     }
 
+
     return (
-        <section>
-            <div className="notes">
-                {note && (
-                    <>
-                        <img className="pushpin" src='https://www.freeiconspng.com/thumbs/pushpin-png/pushpin-png-27.png' alt="pushpin" />
-                        <h1>{note.name}</h1>
-                        {note.image && (
-                            <img src={note.image} alt={note.name} />
-                        )}
-                        <p>{note.description}</p>
-                    </>
-                )}
-                <button id='deleteShow' onClick={handleDelete}>
-                </button>
-                <form className="showForm" onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        value={editForm.name}
-                        name="name"
-                        placeholder="name"
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="text"
-                        value={editForm.image}
-                        name="image"
-                        placeholder="image URL"
-                        onChange={handleChange}
-                    />
-                    <input
-                        type="text"
-                        value={editForm.description}
-                        name="description"
-                        placeholder="description"
-                        onChange={handleChange}
-                    />
-                    <input type="submit" value="Edit Note" />
-                </form>
-            </div>
-        </section>
+        <>
+            <section>
+                <div className='notes'>
+                    {note && (
+                        <>
+
+                            <h1 className="showH1">{note.name}</h1>
+                            {note.image && (
+                                <img src={note.image} alt={note.name} />
+                            )}
+                            <p>{note.description}</p>
+                        </>
+                    )}
+                    <button id='deleteShow' onClick={handleDelete}>
+                    </button>
+                </div>
+            </section>
+            <form className="indexForm" onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={editForm.name}
+                    name="name"
+                    placeholder="name"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    value={editForm.image}
+                    name="image"
+                    placeholder="image URL"
+                    onChange={handleChange}
+                />
+                <textarea
+                    cols="30"
+                    type="text"
+                    value={editForm.description}
+                    name="description"
+                    placeholder="description"
+                    onChange={handleChange}
+                />
+                <input type="submit" value="Edit Note" />
+            </form>
+        </>
     )
 }
